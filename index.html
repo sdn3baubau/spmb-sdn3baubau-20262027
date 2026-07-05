@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pengumuman Hasil SPMB | SD Negeri 3 Baubau</title>
+
+    <meta name="description"
+        content="Website Resmi Pengumuman Hasil Seleksi Penerimaan Murid Baru SD Negeri 3 Baubau Tahun Ajaran 2026/2027">
+
+    <meta name="author" content="SD Negeri 3 Baubau">
+
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- LOADING -->
+    <!-- ========================= -->
+
+    <div id="loading" class="loading">
+
+        <div class="spinner"></div>
+
+        <h3>Memeriksa Data...</h3>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header class="hero">
+
+        <img src="images/background.jpg" alt="SD Negeri 3 Baubau" class="hero-image">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <img src="images/logo.png" alt="Logo SD Negeri 3 Baubau" class="logo">
+
+            <p class="small-title">
+
+                PEMERINTAH KOTA BAUBAU
+
+            </p>
+
+            <p class="small-title">
+
+                DINAS PENDIDIKAN, PEMUDA DAN OLAHRAGA KOTA BAUBAU
+
+            </p>
+
+            <h1>
+
+                SD NEGERI 3 BAUBAU
+
+            </h1>
+
+            <h2>
+
+                PENGUMUMAN HASIL
+
+            </h2>
+
+            <h3>
+
+                SELEKSI PENERIMAAN MURID BARU (SPMB)
+
+            </h3>
+
+            <h4>
+
+                TAHUN AJARAN 2026/2027
+
+            </h4>
+
+        </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- FORM -->
+    <!-- ========================= -->
+
+    <main>
+
+        <section class="search-card">
+
+            <h2>
+
+                Cek Hasil Seleksi
+
+            </h2>
+
+            <p>
+
+                Masukkan Nomor Registrasi dan NISN atau NIK.
+
+            </p>
+
+            <form id="searchForm">
+
+                <div class="form-group">
+
+                    <label>
+
+                        Nomor Registrasi
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registrasi"
+                        maxlength="3"
+                        placeholder="Contoh : 001"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        NISN / NIK
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="identitas"
+                        placeholder="Masukkan NISN atau NIK"
+                        required>
+
+                </div>
+
+                <button type="submit" class="btn-primary">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    CEK HASIL SELEKSI
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- HASIL -->
+        <!-- ========================= -->
+
+        <section id="result" class="result hidden">
+
+            <!-- Diisi oleh JavaScript -->
+
+        </section>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <img src="images/logo.png" alt="Logo" class="footer-logo">
+
+        <h3>SD Negeri 3 Baubau</h3>
+
+        <p>
+
+            Pemerintah Kota Baubau
+
+        </p>
+
+        <p>
+
+            Dinas Pendidikan, Pemuda dan Olahraga Kota Baubau
+
+        </p>
+
+        <hr>
+
+        <p>
+
+            © 2026 SD Negeri 3 Baubau
+
+        </p>
+
+        <p>
+
+            Website Resmi Pengumuman Hasil Seleksi Penerimaan Murid Baru (SPMB)
+
+        </p>
+
+        <p>
+
+            Tahun Ajaran 2026/2027
+
+        </p>
+
+    </footer>
+
+    <!-- DATA SISWA -->
+    <script src="data.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

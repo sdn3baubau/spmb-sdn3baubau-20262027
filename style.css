@@ -1,0 +1,622 @@
+/* =====================================================
+   WEBSITE PENGUMUMAN HASIL SPMB
+   SD NEGERI 3 BAUBAU
+   Tahun Ajaran 2026/2027
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#0d6efd;
+    --primary-dark:#0a58ca;
+    --success:#198754;
+    --danger:#dc3545;
+    --white:#ffffff;
+    --dark:#1f2937;
+    --gray:#6b7280;
+    --glass:rgba(255,255,255,.18);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fb;
+
+    color:#222;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+        LOADING
+========================== */
+
+.loading{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+}
+
+.spinner{
+
+    width:70px;
+
+    height:70px;
+
+    border:8px solid #ddd;
+
+    border-top:8px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.loading h3{
+
+    margin-top:20px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+        HERO
+========================== */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,40,90,.65);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+
+    max-width:900px;
+
+}
+
+.logo{
+
+    width:130px;
+
+    margin-bottom:20px;
+
+    animation:fadeDown 1s;
+
+}
+
+.small-title{
+
+    font-size:18px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+}
+
+.hero h1{
+
+    margin-top:15px;
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+.hero h2{
+
+    margin-top:20px;
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+.hero h3{
+
+    margin-top:12px;
+
+    font-size:28px;
+
+    font-weight:500;
+
+}
+
+.hero h4{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#ffe082;
+
+}
+
+/* ==========================
+      SEARCH CARD
+========================== */
+
+.search-card{
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:-80px auto 50px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+    padding:40px;
+
+    position:relative;
+
+    z-index:20;
+
+}
+
+.search-card h2{
+
+    color:var(--primary);
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.search-card p{
+
+    text-align:center;
+
+    color:var(--gray);
+
+    margin-bottom:30px;
+
+}
+
+.form-group{
+
+    margin-bottom:20px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.form-group input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 10px rgba(13,110,253,.2);
+
+}
+
+/* ==========================
+        BUTTON
+========================== */
+
+.btn-primary{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+        RESULT
+========================== */
+
+.result{
+
+    width:90%;
+
+    max-width:850px;
+
+    margin:30px auto 80px;
+
+}
+
+.result-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    padding:40px;
+
+    animation:fadeUp .6s;
+
+}
+
+.result-card h1{
+
+    margin:15px 0;
+
+    text-align:center;
+
+}
+
+.result-card h2{
+
+    text-align:center;
+
+}
+
+.result-card h3{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.result-card table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:25px 0;
+
+}
+
+.result-card td{
+
+    padding:12px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.result-card td:first-child{
+
+    width:220px;
+
+    font-weight:600;
+
+}
+
+.success{
+
+    border-top:8px solid var(--success);
+
+}
+
+.fail{
+
+    border-top:8px solid var(--danger);
+
+}
+
+.info{
+
+    margin-top:25px;
+
+    padding:20px;
+
+    background:#eef7ff;
+
+    border-left:6px solid var(--primary);
+
+    border-radius:10px;
+
+    line-height:1.8;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ==========================
+        FOOTER
+========================== */
+
+footer{
+
+    background:#083b82;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.footer-logo{
+
+    width:70px;
+
+    margin-bottom:15px;
+
+}
+
+footer hr{
+
+    margin:20px auto;
+
+    width:220px;
+
+    border:.5px solid rgba(255,255,255,.3);
+
+}
+
+footer p{
+
+    margin:6px 0;
+
+}
+
+/* ==========================
+        ANIMATION
+========================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+        MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+height:auto;
+
+min-height:100vh;
+
+padding:60px 20px;
+
+}
+
+.logo{
+
+width:90px;
+
+}
+
+.small-title{
+
+font-size:13px;
+
+}
+
+.hero h1{
+
+font-size:28px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
+
+.hero h3{
+
+font-size:18px;
+
+}
+
+.hero h4{
+
+font-size:18px;
+
+}
+
+.search-card{
+
+margin-top:-40px;
+
+padding:25px;
+
+}
+
+.result-card{
+
+padding:25px;
+
+}
+
+.result-card td{
+
+display:block;
+
+width:100%;
+
+}
+
+.result-card td:first-child{
+
+font-weight:bold;
+
+border:none;
+
+padding-bottom:0;
+
+}
+
+}
